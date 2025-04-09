@@ -1,0 +1,2784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Venue - Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="home.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Ensures consistent width calculation */
+            
+        }
+
+     html,   body {
+        font-family: 'Montserrat', sans-serif;
+
+            
+            /* width: 100%;
+            height: 100%; */
+           
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+            font-family: 'Montserrat', sans-serif;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: transparent;
+            
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px; /* Adjusted padding */
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .logo span {
+            color: #007bff;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-grow: 1; /* Makes nav take available space */
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #007bff;
+        }
+
+        .login-btn {
+            display: flex;
+            align-items: center;
+            background: #007bff;
+            color: white;
+            width: 190px;
+            height: 42px;
+            border: none;
+            border-radius: 23px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            transition: background 0.3s;
+            justify-content: center;
+            padding: 5px;
+            white-space: nowrap;
+            margin-left: auto; /* Keeps the button at the right without stretching */
+        }
+
+        .login-btn:hover {
+            background: #0056b3;
+        }
+
+        .bmv-circle {
+            width: 20px;
+            height: 20px;
+            background: white;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 50%;
+            margin-right: 8px;
+            font-size: 6px;
+        }
+
+           /* 🔹 Tablet (Max Width: 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 25px;
+        height: 60px;
+    }
+    .nav {
+        gap: 20px; /* Reduce space between links */
+    }
+    .nav a {
+        font-size: 13px;
+    }
+    .login-btn {
+        width: 150px;
+        height: 36px;
+        font-size: 10px;
+    }
+    .bmv-circle {
+        width: 14px;
+        height: 14px;
+        font-size: 4px;
+    }
+}
+
+/* 🔹 Smaller Tablets & Large Phones (Max Width: 768px) */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 18px;
+        height: 55px;
+    }
+    .nav {
+        gap: 15px;
+    }
+    .nav a {
+        font-size: 11px;
+    }
+    .login-btn {
+        width: 140px;
+        height: 34px;
+        font-size: 9px;
+    }
+    .bmv-circle {
+        width: 12px;
+        height: 12px;
+        font-size: 3.5px;
+    }
+}
+/* 🔹 Hide Navigation and Show Hamburger Menu (Below 600px) */
+@media (max-width: 600px) {
+    .nav {
+        display: none; /* Hide default nav */
+    }
+    .menu-icon {
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        color: white;
+    }
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: white;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .mobile-menu a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .mobile-menu a:hover {
+        background: #007bff;
+        color: white;
+    }
+}
+        
+    </style>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Book <span>My Event</span></div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">List Yourself</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <button class="login-btn">
+            <div class="bmv-circle">BME</div>
+            Login or Create Account
+        </button>
+    </header>
+    <section class="hero">
+        <h1>Find Your Perfect Venue Here</h1>
+        
+        
+
+      
+  
+      <!-- First Pill Button: Event Categories -->
+      <div class="pill-container">
+          <span>Corporate Booking</span>
+          <span>Wedding Ceremony</span>
+          <span>Party & Celebration</span>
+          <span>Exhibition & Trade Event</span>
+          <span>Traditional Venue</span>
+          <span>Luxury Event</span>
+          <span>Food & Beverages</span>
+          <span>Educational & Training</span>
+          <span>Live concert</span>
+      </div>
+<!-- Mobile Dropdown for Event Categories (540px and below only) -->
+<select class="mobile-event-dropdown">
+    <option selected disabled>Event Type</option>
+    <option>Corporate Booking</option>
+    <option>Wedding Ceremony</option>
+    <option>Party & Celebration</option>
+    <option>Exhibition & Trade Event</option>
+    <option>Traditional Venue</option>
+    <option>Luxury Event</option>
+    <option>Food & Beverages</option>
+    <option>Educational & Training</option>
+    <option>Live concert</option>
+  </select>
+
+  
+      <!-- Second Pill Button: Search Fields -->
+      <div class="search-pill">
+          <div class="search-field">
+              <input type="text" placeholder="Location">
+              <span class="subtext">Which city do you prefer?</span>
+          </div>
+          <div class="divider"></div>
+          <div class="search-field">
+              <input type="date" placeholder="Check-in">
+              <span class="subtext">Add Dates</span>
+          </div>
+          <div class="divider"></div>
+          <div class="search-field">
+              <input type="date" placeholder="Check-out">
+              <span class="subtext">Add Dates</span>
+          </div>
+          <div class="divider"></div>
+          <div class="search-field">
+              <input type="number" placeholder="Guests">
+              <span class="subtext">Add Guests</span>
+          </div>
+          <button class="search-btn">🔍</button>
+      </div>
+  </section>
+  
+  <style>
+      .hero {
+        background: url('https://cdn.tourradar.com/s3/tour/1500x800/295913_671df6f46a97e.jpg') no-repeat center center/cover;
+
+          text-align: center;
+          padding-top: 150px;
+          color: white;
+          padding-top: 250px; 
+          margin-bottom: 40px;/* Adjust to prevent overlap */
+   min-height: 100vh;
+    
+      }
+  
+      .hero h1 {
+          font-size: 64px;
+          margin-bottom: 20px;
+      }
+  
+      /* First Pill: Event Categories */
+      .pill-container {
+          width: 794px;
+          height: 60px;
+          margin: 0 auto 15px;
+          margin-top: 20px;
+          background: rgba(255, 255, 255, 1);
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          color: #ACABAC ;
+          font-size: 11.5px;
+          backdrop-filter: blur(5px);
+      }
+  
+      /* Second Pill: Search Fields */
+      .search-pill {
+          width: 794px;
+          height: 70px;
+          background: rgba(255, 255, 255, 1);
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 10px;
+          margin: 0 auto ;
+          margin-top: 20px;
+          backdrop-filter: blur(5px);
+      }
+  
+      .search-field {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+  
+      .search-field input {
+          background: transparent;
+          border: none;
+          outline: none;
+          color: black;
+          font-size: 16px;
+          text-align: center;
+          flex: 1;
+      }
+  
+      .search-field .subtext {
+          font-size: 12px;
+          color: grey;
+          margin-top: 4px;
+      }
+  
+      .search-field input::placeholder {
+          color: rgba(0, 0, 0, 0.7);
+      }
+  
+      /* Dividers */
+      .divider {
+          width: 2px;
+          height: 40px;
+          background: white;
+          opacity: 0.5;
+      }
+  
+      /* Search Button */
+      .search-btn {
+          background: none;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+          color: white;
+      }
+
+      /* Hide dropdown by default */
+.mobile-event-dropdown {
+  display: none;
+  width: 90%;
+  margin: 0 auto 10px;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  font-size: 13px;
+}
+
+      /* Tablet Devices (768px - 1024px) */
+      @media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .pill-container {
+        width: 680px;
+        height: 50px;
+        font-size: 10px;
+    }
+
+    .search-pill {
+        width: 680px;
+        height: 60px;
+        padding: 0 8px;
+    }
+
+    .search-field input {
+        font-size: 14px;
+    }
+
+    .search-field .subtext {
+        font-size: 11px;
+    }
+
+    .search-btn {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .hero {
+        padding-top: 80px; /* Reduce top spacing */
+        padding-bottom: 140px; /* Optional: add a little bottom space */
+        min-height: auto; /* Override the 100vh to fit content */
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+
+    .pill-container {
+        width: 620px;
+        height: 44px;
+        font-size: 9.5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .search-pill {
+        width: 620px;
+        height: 52px;
+        padding: 0 8px;
+        margin-top: 12px;
+    }
+
+    .search-field input {
+        font-size: 13px;
+    }
+
+    .search-field .subtext {
+        font-size: 10px;
+        margin-top: 2px;
+    }
+
+    .search-btn {
+        font-size: 18px;
+    }
+
+    .divider {
+        height: 34px;
+    }
+}
+@media screen and (width: 768px) {
+  .pill-container {
+    gap: 10px;
+  }
+
+  .pill {
+    height: 40px;
+    font-size: 13px;
+    padding: 0 16px;
+    border-radius: 25px;
+  }
+
+  .search-pill {
+    height: 44px;
+    padding: 0 10px;
+    border-radius: 25px;
+    gap: 8px;
+  }
+
+  .search-field input {
+    font-size: 12px;
+  }
+
+  .search-field .subtext {
+    font-size: 10px;
+  }
+
+  .search-btn {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .pill-container {
+    height: 44px;
+    font-size: 10px;
+    border-radius: 25px;
+    padding: 0 8px;
+  }
+
+  .pill-container span {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .search-pill {
+    height: 50px;
+    padding: 0 8px;
+    border-radius: 25px;
+    gap: 6px;
+  }
+
+  .search-field input {
+    font-size: 11px;
+  }
+
+  .search-field .subtext {
+    font-size: 9px;
+  }
+
+  .search-btn {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+
+  .search-field {
+    padding: 0 4px;
+  }
+
+  .divider {
+    height: 30px;
+  }
+}
+@media screen and (max-width: 540px) {
+  /* Hide original pill */
+  .pill-container {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  /* Show dropdown for event types */
+  .mobile-event-dropdown {
+    display: block;
+    width: 90%;
+    margin: 0 auto 10px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+  }
+
+  /* Smaller and tighter search pill */
+  .search-pill {
+    height: 36px;
+    padding: 0 3px;
+    border-radius: 18px;
+    gap: 2px;
+    width: 95%;
+  }
+
+  .search-field {
+    padding: 0 1px;
+  }
+
+  .search-field input {
+    font-size: 9px;
+    max-width: 60px;
+  }
+
+  .search-field .subtext {
+    font-size: 7px;
+  }
+
+  .search-btn {
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+
+  .divider {
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Hide the first pill container */
+  .pill-container {
+    display: none;
+  }
+
+  /* Show the dropdown for Event Type (if using it, otherwise remove this) */
+  .mobile-event-dropdown {
+    display: block;
+    width: 90%;
+    margin: 0 auto 10px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+  }
+
+  /* Second pill styling (search bar) */
+  .search-pill {
+    height: 32px;
+    padding: 0 3px;
+    border-radius: 16px;
+    gap: 2px;
+    width: 95%;
+    margin-top: 10px;
+  }
+
+  .search-field {
+    padding: 0 2px;
+  }
+
+  .search-field input {
+    font-size: 8px;
+    max-width: 50px;
+  }
+
+  .search-field .subtext {
+    font-size: 6px;
+  }
+
+  .search-btn {
+    font-size: 12px;
+    padding: 2px 3px;
+  }
+
+  .divider {
+    height: 18px;
+    width: 1px;
+  }
+
+  /* Adjust h1 title */
+  .hero h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+
+  </style>
+  
+ 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Luxury Event Spaces</title>
+      <style>
+          /* Luxury Event Spaces Section */
+          .luxury-event-spaces {
+              padding: 40px 40px;
+              background-color: #f8f9fa;
+              display: flex;
+              flex-direction: column;
+              align-items: center; /* Align everything in the center */
+          }
+  
+          .section-title {
+              font-size: 36px;
+              font-weight: bold;
+              color: black;
+              margin-bottom: 30px;
+              align-self: flex-start; /* Align heading to match the first image box */
+              padding-left: 9%; /* Move heading to align with first event box */
+          }
+  
+          .event-container {
+              display: flex;
+              justify-content: center;
+              gap: 20px;
+              flex-wrap: wrap;
+              width: 90%; /* Keep it aligned with the first box */
+          }
+  
+          .event-box {
+              width: 279px;
+              height: 340px;
+              border-radius: 8px;
+              position: relative;
+              overflow: hidden;
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              padding: 15px;
+              color: white;
+              font-weight: bold;
+              text-align: center;
+              background-color: #000;
+          }
+  
+          .event-box img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 0;
+          }
+  
+          .event-box::before {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100px;
+              background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+              z-index: 1;
+          }
+  
+          .event-text {
+              position: absolute;
+              bottom: 17px;
+              left: 15px;
+              z-index: 2;
+              font-size: 16px;
+              font-weight: bold;
+              text-align: left;
+          }
+  
+          .event-badge {
+              position: absolute;
+              bottom: 60px; /* Slightly above the text */
+              left: 15px;
+              width: 70px;
+              height: 70px;
+              background-color: #C2C6CC;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 14px;
+              font-weight: bold;
+              border-radius: 50%;
+              z-index: 3;
+          }
+      </style>
+  </head>
+  <body>
+  
+      <!-- Luxury Event Spaces Section -->
+      <section class="luxury-event-spaces">
+          <h2 class="section-title">Luxury Event Spaces</h2>
+          
+          <div class="event-container">
+              <div class="event-box">
+                  <img src="https://res.cloudinary.com/misterbnb/image/upload/c_lfill,f_auto,fl_lossy,h_400,q_auto,w_500/v1699531268/guide/cms-aa5e3d3cbdfd4d27bbbe0e7ba1867288021bbc5b.jpg" alt="Premium Traditional Venues">
+                  <div class="event-badge">BME</div>
+                  <div class="event-text">Premium Traditional Venues</div>
+              </div>
+              <div class="event-box">
+                  <img src="https://cdn.pixabay.com/photo/2024/02/20/00/30/bar-8584381_1280.jpg" alt="Best Nightlife & Party Venues">
+                  <div class="event-badge">BME</div>
+                  <div class="event-text">Best Nightlife & Party Venues</div>
+              </div>
+              <div class="event-box">
+                  <img src="https://media.licdn.com/dms/image/v2/C4D22AQG0s3AgPTug4A/feedshare-shrink_800/feedshare-shrink_800/0/1637078648694?e=2147483647&v=beta&t=ZYiHRKNG0pDbPTjEbltuWMadDwBXEjEL7CRJTedT640" alt="Private Luxury Event Venue">
+                  <div class="event-badge">BME</div>
+                  <div class="event-text">Private Luxury Event Venue</div>
+              </div>
+              <div class="event-box">
+                  <img src="https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/sydney-opera-house-at-dusk-zeana-romanovna.jpg" alt="Exotic Destination Wedding Venue">
+                  <div class="event-badge">BME</div>
+                  <div class="event-text">Exotic Destination Venue</div>
+              </div>
+          </div>
+      </section>
+  
+  </body>
+  </html>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Luxury Dining Experiences</title>
+      <style>
+          /* Luxury Dining Experiences Section */
+          .luxury-dining-experiences {
+              padding: 40px 40px;
+              background-color: #f8f9fa;
+              display: flex;
+              flex-direction: column;
+              align-items: center; /* Align everything in the center */
+          }
+  
+          .section-title {
+              font-size: 30px;
+              font-weight: bold;
+              color: black;
+              margin-bottom: 30px;
+              align-self: flex-start; /* Align heading to match the first image box */
+              padding-left: 9%; /* Move heading to align with first event box */
+          }
+  
+          .dining-container {
+              display: flex;
+              justify-content: center;
+              gap: 20px;
+              flex-wrap: wrap;
+              width: 90%; /* Keep it aligned with the first box */
+          }
+  
+          .dining-box {
+              width: 279px;
+              height: 340px;
+              border-radius: 8px;
+              position: relative;
+              overflow: hidden;
+              display: flex;
+              align-items: flex-end;
+              justify-content: center;
+              padding: 15px;
+              color: white;
+              font-weight: bold;
+              text-align: center;
+              background-color: #000;
+          }
+  
+          .dining-box img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 0;
+          }
+  
+          .dining-box::before {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100px;
+              background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+              z-index: 1;
+          }
+  
+          .dining-text {
+              position: absolute;
+              bottom: 17px;
+              left: 15px;
+              right: 5px;
+              z-index: 2;
+              font-size: 15px;
+              font-weight: bold;
+              text-align: left;
+          }
+  
+          .dining-badge {
+              position: absolute;
+              bottom: 60px; /* Slightly above the text */
+              left: 15px;
+              width: 70px;
+              height: 70px;
+              background-color: #C2C6CC;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 14px;
+              font-weight: bold;
+              border-radius: 50%;
+              z-index: 3;
+          }
+      </style>
+  </head>
+  <body>
+  
+      <!-- Luxury Dining Experiences Section -->
+      <section class="luxury-dining-experiences">
+          <h2 class="section-title">Discover Hidden Gems of India for Your Perfect Event</h2>
+          
+          <div class="dining-container">
+              <div class="dining-box">
+                  <img src="https://images.pexels.com/photos/13070742/pexels-photo-13070742.jpeg?cs=srgb&dl=pexels-oscar-dominguez-227264793-13070742.jpg&fm=jpg" alt="Fine Dining Restaurants">
+                  <div class="dining-badge">BME</div>
+                  <div class="dining-text">Royal Palaces Turned Event Venues</div>
+              </div>
+              <div class="dining-box">
+                  <img src="https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/blt0f1fa94243c09ca5/676808475586154d046a2f00/hungary-4544781-Header_Mobile.jpg?format=webp&auto=avif&crop=1:1&quality=100&width=425" alt="Rooftop Gourmet Experiences">
+                  <div class="dining-badge">BME</div>
+                  <div class="dining-text">Beachside Venues with Stunning Views</div>
+              </div>
+              <div class="dining-box">
+                  <img src="https://content.jdmagicbox.com/quickquotes/listicle/listicle_1737460452775_0h6wr_1280x848.jpg?impolicy=queryparam&im=Resize=(847,400),aspect=fit&q=75" alt="Exclusive Wine & Dine">
+                  <div class="dining-badge">BME</div>
+                  <div class="dining-text">Heritage Forts & Havelis for a Regal Touch</div>
+              </div>
+              <div class="dining-box">
+                  <img src="https://cdn.pixabay.com/photo/2016/08/13/17/19/dominican-republic-1591106_960_720.jpg" alt="Private Chef Dining">
+                  <div class="dining-badge">BME</div>
+                  <div class="dining-text">Lush Green Venues for a Nature-Inspired Event</div>
+                  
+              </div>
+          </div>
+      </section>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Dining & Wedding Venues</title>
+    <style>
+        /* Common Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /* Section Styling */
+        .venue-section {
+            padding: 40px 40px;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-title {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 30px;
+            align-self: flex-start;
+            padding-left: 9%;
+        }
+
+        .venue-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 90%;
+        }
+
+        .venue-box {
+            width: 279px;
+            height: 340px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            background-color: #000;
+        }
+
+        .venue-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .venue-box::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            z-index: 1;
+        }
+
+        .venue-text {
+            position: absolute;
+            bottom: 17px;
+            left: 15px;
+            right: 5px;
+            z-index: 2;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .venue-badge {
+            position: absolute;
+            bottom: 60px;
+            left: 15px;
+            width: 70px;
+            height: 70px;
+            background-color: #C2C6CC;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 50%;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+
+   
+
+    <!-- Destination Wedding Venues Section -->
+    <section class="venue-section">
+        <h2 class="section-title">Top Venues for Your Destination Wedding</h2>
+        
+        <div class="venue-container">
+            <div class="venue-box">
+                <img src="https://cdn.pixabay.com/photo/2019/08/12/13/39/algarve-4401278_960_720.jpg" alt="Luxury Wedding Venues">
+                <div class="venue-badge">BME</div>
+                <div class="venue-text">Exclusive Venue Picks</div>
+            </div>
+            <div class="venue-box">
+                <img src="https://i0.wp.com/reviewkorean.com/wp-content/uploads/2023/11/image-8.png?resize=1024,682&ssl=1" alt="Beachfront Wedding">
+                <div class="venue-badge">BME</div>
+                <div class="venue-text">Top-Rated Venues</div>
+            </div>
+            <div class="venue-box">
+                <img src="https://dreamzweddingplanner.com/img/india/india-outer/innerbanner/imgp2.jpg" alt="Garden Wedding">
+                <div class="venue-badge">BME</div>
+                <div class="venue-text">Trending Venues</div>
+            </div>
+            <div class="venue-box">
+                <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mountain Wedding">
+                <div class="venue-badge">BME</div>
+                <div class="venue-text">Limited-Time Availability</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+<!-- List Your Venue Section -->
+<section class="list-venue-section">
+    <div class="list-venue-container">
+        <!-- Left Side (Text & Input) -->
+        <div class="list-venue-text">
+            <h2>List Your Venue Now ! <span>🎁</span></h2>
+            <p>Use code <strong>BMV100</strong> and get <strong>Up to Rs.1000 OFF</strong> on your Venue listing.</p>
+            
+            <div class="input-box">
+                <div class="phone-input">
+                    <span>🇮🇳 +91</span>
+                    <span class="separator">—</span>
+                    <input type="text" placeholder="Enter Mobile number">
+                </div>
+                <button class="get-link-btn">GET THE LINK</button>
+            </div>
+        </div>
+
+        <!-- Right Side (QR Code) -->
+        <div class="qr-code">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Code" class="qr-code">
+
+        </div>
+    </div>
+</section>
+
+<!-- CSS Styling -->
+<style>
+/* Section Styling */
+.list-venue-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EFF0F2;
+    padding: 20px 0;
+}
+
+/* Container */
+.list-venue-container {
+    width: 1242px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures QR code is on the right */
+    background: #EFF0F2;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+/* Left Content */
+.list-venue-text {
+    flex: 1;
+    color: black;
+    max-width: 60%; /* Restricts text width to avoid wrapping */
+}
+
+.list-venue-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.list-venue-text p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+/* ✅ Input Box & Button Container */
+.input-box {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+    flex-wrap: nowrap;
+    border: none; /* Ensure no extra border */
+    background: transparent;
+}
+
+/* ✅ Phone Input Container */
+.phone-input {
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 49px;  /* Increased by 1px to match button */
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: white;
+    padding: 0 12px;
+    box-sizing: border-box; /* Prevent size issues */
+}
+
+/* ✅ Country Code & Flag */
+.phone-input span {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: black;
+    font-size: 16px;
+}
+
+/* ✅ Separator */
+.separator {
+    color: grey;
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+/* ✅ Input Field (No extra box inside) */
+.phone-input input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    background: transparent;
+    color: black;
+    padding-left: 5px;
+}
+
+/* ✅ Ensuring the button has a fixed size */
+.input-box  .get-link-btn {
+    width: 190px !important; /* Force width */
+    height: 49px !important; /* Force height */
+    background: white;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* Fix text alignment */
+    display: block; 
+    align-items: center;
+    justify-content: center;
+    
+    padding: 0; /* Ensure no extra padding affects the size */
+    margin: 0; /* Avoid any margin interference */
+    box-sizing: border-box; /* Ensure width & height include borders */
+}
+
+/* ✅ Hover Effect */
+.get-link-btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* ✅ Container for QR Code (Rectangular Background) */
+.qr-container {
+    width: 120px; /* Adjust based on QR size */
+    height: 120px; /* Adjust based on QR size */
+    background: #e0e0e0; /* Light grey for classy effect */
+    border-radius: 8px; /* Slight rounding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* Ensures QR is centered */
+}
+
+
+
+
+
+.qr-code {
+    display: flex;  /* Ensures proper alignment */
+    justify-content: flex-end; /* Pushes it to the right */
+    align-items: center; /* Prevents centering issue */
+    width: 225px;
+    height: 225px;
+    flex-shrink: 0;
+    margin-left: 20px;
+    background-color: transparent; /* Ensures no unwanted background */
+}
+
+/* Ensure QR Image Fills Container */
+.qr-code img {
+    width: 100% !important;  /* Forces full width */
+    height: 100% !important; /* Forces full height */
+    object-fit: cover; /* Ensures correct size */
+    display: block; /* Prevents inline spacing issues */
+}
+
+/* Responsive Media Queries */
+
+/* Medium Screens - Tablets and small desktops */
+@media (max-width: 1024px) {
+    .list-venue-container {
+        width: 95%;
+        height: auto;
+        padding: 30px;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .list-venue-text h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .list-venue-text p {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .phone-input {
+        width: 280px;
+        height: 45px;
+    }
+
+    .input-box .get-link-btn {
+        width: 160px !important;
+        height: 45px !important;
+        font-size: 14px;
+    }
+
+    .qr-code {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Small Screens - Mobile Landscape */
+@media (max-width: 768px) {
+    .list-venue-container {
+        flex-direction: column;
+        height: auto;
+        padding: 25px;
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .list-venue-text {
+        max-width: 100%;
+    }
+
+    .list-venue-text h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .list-venue-text p {
+        font-size: 15px;
+    }
+
+    .input-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .phone-input {
+        width: 100%;
+    }
+
+    .input-box .get-link-btn {
+        width: 100% !important;
+    }
+
+    .qr-code {
+        width: 150px;
+        height: 150px;
+        margin-left: 0;
+    }
+}
+
+/* Extra Small Screens - Mobile Portrait */
+@media (max-width: 480px) {
+    .list-venue-container {
+        padding: 20px;
+    }
+
+    .list-venue-text h2 {
+        font-size: 20px;
+    }
+
+    .list-venue-text p {
+        font-size: 14px;
+    }
+
+    .phone-input span,
+    .separator {
+        font-size: 14px;
+    }
+
+    .phone-input input {
+        font-size: 14px;
+    }
+
+    .input-box .get-link-btn {
+        font-size: 14px;
+        height: 42px !important;
+    }
+
+    .qr-code {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+</style>
+
+<section class="featured-section">
+    <div class="featured-container">
+        <h2 class="featured-title">Featured Venues on our Listing</h2>
+        <div class="featured-grid">
+            <div class="featured-box">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQfyj6dUGs0UDgdhfF8A4YT4QsBs_6CWf208HXx0pYmCFa8YBsP" alt="The Oberoi Udaivilas, Udaipur">
+                <h3 class="featured-heading">The Oberoi Udaivilas, Udaipur</h3>
+                <p class="featured-subheading">Udaipur, Rajasthan</p>
+            </div>
+            <div class="featured-box">
+                <img src="https://cdn.sanity.io/images/ocl5w36p/prod3/50410f8db80276ed576801242b3c1af8b1e138f3-1281x1760.jpg?w=480&auto=format&dpr=2" alt="Taj Falaknuma Palace, Hyderabad">
+                <h3 class="featured-heading">Taj Falaknuma Palace, Hyderabad</h3>
+                <p class="featured-subheading">Hyderabad, Telangana</p>
+            </div>
+            <div class="featured-box">
+                <img src="https://www.royalindiatours.com/uploads/Umaid-Bhawan-Palace.webp" alt="Umaid Bhawan Palace, Jodhpur">
+                <h3 class="featured-heading">Umaid Bhawan Palace, Jodhpur</h3>
+                <p class="featured-subheading">Jodhpur, Rajasthan</p>
+            </div>
+            <div class="featured-box">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRYWzdyjcBPJOHDaTUQJoC55R8mjcCHGwkmOiUzci7m-nlu3zNA" alt="Rambagh Palace, Jaipur">
+                <h3 class="featured-heading">Rambagh Palace, Jaipur</h3>
+                <p class="featured-subheading">Jaipur, Rajasthan</p>
+            </div>
+            <div class="featured-box">
+                <img src="https://www.theleela.com/prod/content/assets/styles/tl_840_604_webp/public/2024-01/The-lobby.jpg.webp?VersionId=xc5tMUC3d08ugKvkxRCe1FzeqXWMwsmt&itok=EQ5WTIO-" alt="The Leela Palace, New Delhi">
+                <h3 class="featured-heading">The Leela Palace, New Delhi</h3>
+                <p class="featured-subheading">Chanakyapuri, New Delhi</p>
+            </div>
+            <div class="featured-box">
+                <img src="https://cache.marriott.com/content/dam/marriott-digital/jw/apec/hws/b/blrjw/en_us/photo/unlimited/assets/blrjw-lobby-0041.jpg" alt="JW Marriott">
+                <h3 class="featured-heading">JW Marriott</h3>
+                <p class="featured-subheading">Mussoorie, Uttarakhand</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Section Styling */
+.featured-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    padding: 50px 0;
+}
+
+/* Container */
+.featured-container {
+    width: 1200px; /* Ensure this is wide enough for 3 columns */
+    text-align: center;
+    background: none;
+}
+
+/* Title */
+.featured-title {
+    font-size: 36px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns */
+    gap: 20px; /* Space between boxes */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Box */
+.featured-box {
+    width: 382px;
+    height: 491px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.featured-box:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.featured-box img {
+    width: 100%; /* Ensure it fills the container */
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Heading */
+.featured-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: black;
+}
+
+/* Subheading */
+.featured-subheading {
+    font-size: 14px;
+    color: grey;
+    margin-top: 5px;
+}
+
+/* ✅ RESPONSIVE MEDIA QUERIES */
+
+/* Tablets (768px to 1024px): 2 boxes per row */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .featured-container {
+        width: 90%;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .featured-box {
+        width: 100%;
+        height: 410px;
+    }
+
+    .featured-box img {
+        height: 280px;
+    }
+
+    .featured-heading {
+        font-size: 17px;
+    }
+
+    .featured-subheading {
+        font-size: 13px;
+    }
+}
+
+/* Small screens (up to 767px): 1 box per row */
+@media (max-width: 767px) and (min-width: 481px) {
+    .featured-container {
+        width: 95%;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .featured-box {
+        width: 100%;
+        height: 360px;
+    }
+
+    .featured-box img {
+        height: 250px;
+    }
+
+    .featured-heading {
+        font-size: 14px;
+    }
+
+    .featured-subheading {
+        font-size: 12px;
+    }
+}
+
+/* Mobile phones (up to 480px): 1 box per row, compact */
+@media (max-width: 480px) {
+    .featured-container {
+        width: 95%;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .featured-box {
+        width: 100%;
+        height: 320px;
+    }
+
+    .featured-box img {
+        height: 220px;
+    }
+
+    .featured-heading {
+        font-size: 15px;
+    }
+
+    .featured-subheading {
+        font-size: 11px;
+    }
+}
+
+
+</style>
+
+
+
+
+
+<section class="background-section">
+    <div class="content-box">
+        <h2 class="main-heading">Explore More Stunning Venues</h2>
+        <p class="sub-text">Find Venues Based on Your Preference</p>
+        <a href="#" class="action-btn">Find A Venue</a>
+    </div>
+</section>
+
+
+<style>
+/* Section Styling */
+.background-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background: url('https://weddingphotographybysf.com/wp-content/uploads/2024/11/Goa-Destination-Wedding-Location.webp') center/cover no-repeat; /* Replace with actual image URL */
+    display: flex;
+    align-items: center;
+    padding-left: 50px; /* Space from left */
+}
+
+/* Content Wrapper */
+.content-box {
+    max-width: 700px; /* Adjust width as needed */
+    color: white;
+}
+
+/* Main Heading */
+.main-heading {
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+/* Subheading */
+.sub-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+/* Button */
+.action-btn {
+    display: inline-block;
+    width: 220px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #008CFF;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    margin-left: 100px;
+}
+
+.action-btn:hover {
+    background-color: #0072cc; /* Slightly darker on hover */
+}
+/* ✅ RESPONSIVE MEDIA QUERIES FOR BACKGROUND SECTION */
+
+/* Tablet Screens: 768px to 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .background-section {
+        height: 350px;
+        padding-left: 40px;
+    }
+
+    .main-heading {
+        font-size: 30px;
+        margin-left: 60px;
+    }
+
+    .sub-text {
+        font-size: 14px;
+        margin-left: 60px;
+    }
+
+    .action-btn {
+        width: 180px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        margin-left: 60px;
+    }
+}
+
+/* Small Screens: 481px to 767px */
+@media (max-width: 767px) and (min-width: 481px) {
+    .background-section {
+        height: 320px;
+        padding-left: 30px;
+    }
+
+    .main-heading {
+        font-size: 26px;
+        margin-left: 40px;
+    }
+
+    .sub-text {
+        font-size: 13px;
+        margin-left: 40px;
+    }
+
+    .action-btn {
+        width: 160px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 13px;
+        margin-left: 40px;
+    }
+}
+
+/* Extra Small Screens: up to 480px */
+@media (max-width: 480px) {
+    .background-section {
+        height: 300px;
+        padding-left: 20px;
+    }
+
+    .main-heading {
+        font-size: 19px;
+        margin-left: 20px;
+    }
+
+    .sub-text {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .action-btn {
+        width: 140px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        margin-left: 20px;
+    }
+}
+
+</style>
+
+
+<section class="blog-section">
+    <h2 class="blog-title">From Royal Residences to Luxurious Retreats</h2>
+    <div class="blog-container">
+        <div class="blog-box">
+            <img src="https://cdn.pixabay.com/photo/2014/08/26/21/46/hotel-428589_1280.jpg" alt="Royal & Heritage Hotels" class="blog-image">
+            <h3 class="blog-heading">Royal & Heritage Hotels</h3>
+            <p class="blog-subheading">Blog</p>
+        </div>
+        <div class="blog-box">
+            <img src="https://cdn.pixabay.com/photo/2014/08/26/21/47/restaurant-428592_1280.jpg" alt="Ultra-Luxury Resorts" class="blog-image">
+            <h3 class="blog-heading">Ultra-Luxury Resorts</h3>
+            <p class="blog-subheading">Blog</p>
+        </div>
+        <div class="blog-box">
+            <img src="https://cdn.pixabay.com/photo/2016/11/21/16/39/cologne-1846353_1280.jpg" alt="Escape to the Mountains" class="blog-image">
+            <h3 class="blog-heading">Escape to the Mountains</h3>
+            <p class="blog-subheading">Blog</p>
+        </div>
+    </div>
+    <button class="view-all-btn">View All Blogs</button>
+</section>
+
+
+<style>
+/* Blog Section */
+.blog-section {
+    text-align: left;
+    padding: 50px 10%;
+}
+
+/* Title */
+.blog-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Blog Container */
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Blog Box */
+.blog-box {
+    width: 382px;
+    height: 431px;
+    text-align: center;
+}
+
+/* Blog Image */
+.blog-image {
+    width: 382px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.blog-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Blog Heading */
+.blog-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Blog Subheading */
+.blog-subheading {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* View All Blogs Button */
+.view-all-btn {
+    display: block;
+    width: 220px;
+    height: 60px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #008CFF;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    margin: 30px auto 0;
+    cursor: pointer;
+}
+
+/* For screens up to 1024px (Laptops & Tablets Landscape) */
+/* For screens between 1027px and 1400px */
+@media (min-width: 1027px) and (max-width: 1400px) {
+  .blog-section {
+    padding: 40px 6%;
+  }
+
+  .blog-title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .blog-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: nowrap;
+  }
+
+  .blog-box {
+    width: 340px;
+    height: 410px;
+  }
+
+  .blog-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .blog-heading {
+    font-size: 17px;
+    margin-top: 8px;
+  }
+
+  .blog-subheading {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .view-all-btn {
+    width: 200px;
+    height: 50px;
+    font-size: 14.5px;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blog-section {
+    padding: 40px 5%;
+  }
+
+  .blog-title {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .blog-container {
+    gap: 16px;
+  }
+
+  .blog-box {
+    width: 300px;
+    height: 380px;
+  }
+
+  .blog-image {
+    width: 100%;
+    height: 270px;
+  }
+
+  .blog-heading {
+    font-size: 16px;
+  }
+
+  .blog-subheading {
+    font-size: 13px;
+  }
+
+  .view-all-btn {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* For screens up to 768px (Tablet Portrait) */
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 30px 4%;
+  }
+
+  .blog-title {
+    font-size: 26px;
+  }
+
+  .blog-container {
+    flex-wrap: nowrap; /* keep them in one row */
+    gap: 14px;
+    justify-content: space-between;
+  }
+
+  .blog-box {
+    width: 280px;
+    height: 360px;
+  }
+
+  .blog-image {
+    height: 240px;
+  }
+
+  .blog-heading {
+    font-size: 15px;
+  }
+
+  .blog-subheading {
+    font-size: 12.5px;
+  }
+
+  .view-all-btn {
+    margin-top: 16px;
+    width: 180px;
+    height: 45px;
+    font-size: 13.5px;
+  }
+}
+
+/* For screens up to 480px (Mobile) */
+@media (max-width: 480px) {
+  .blog-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .blog-box {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  .blog-image {
+    height: 220px;
+  }
+
+  .blog-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .blog-heading {
+    font-size: 14px;
+  }
+
+  .blog-subheading {
+    font-size: 12px;
+  }
+
+  .view-all-btn {
+    margin-top: 20px;
+    width: 160px;
+    height: 42px;
+    font-size: 13px;
+  }
+}
+</style>
+
+<section class="royal-list">
+    <h2 class="section-title">List of Royal Residences for Your Event</h2>
+    <div class="image-container">
+        <div class="image-box">
+            <img src="https://i.pinimg.com/236x/83/a6/be/83a6bee74a8bad4737b9bad07c4b4254.jpg" alt="Dreamy Destinations">
+            <p>Dreamy Destinations for Your Perfect Wedding</p>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/16120257/pexels-photo-16120257/free-photo-of-banquet-hall-prepared-for-the-wedding-reception.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Enchanting Venues">
+            <p>Enchanting Venues to Say 'I Do'</p>
+        </div>
+        <div class="image-box">
+            <img src="https://ap.rdcpix.com/73736501a25321dd31ae20517f00ef6el-m353462867rd-w480_h360.webp" alt="Fairytale Locations">
+            <p>Breathtaking Locations for a Fairytale Wedding</p>
+        </div>
+        <div class="image-box">
+            <img src="https://www.artoftheevent.com/wp-content/uploads/2016/07/AOTE_HighSensory_IntheWoods.jpg" alt="Unforgettable Wedding">
+            <p>Unforgettable Wedding Venues for Your Big Day</p>
+        </div>
+        <div class="image-box">
+            <img src="https://images.pexels.com/photos/28748435/pexels-photo-28748435.jpeg?cs=srgb&dl=pexels-joerg-hartmann-626385254-28748435.jpg&fm=jpg" alt="Exotic Destinations">
+            <p>Exotic Wedding Destinations to Make Memories</p>
+        </div>
+        <div class="image-box">
+            <img src="https://img.freepik.com/premium-photo/view-sydney-opera-house-from-top-hill_1068173-3031.jpg" alt="Picture-Perfect Venues">
+            <p>Picture-Perfect Venues for Your Special Celebration</p>
+        </div>
+    </div>
+</section>
+
+
+<style>
+
+.royal-list {
+    text-align: left;
+    margin: 40px 10px; /* Adjusted left margin */
+}
+
+.section-title {
+    font-size: 28.3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Aligns images to the left */
+    flex-wrap: wrap;
+    gap: 3px; /* No extra gap between images */
+}
+
+.image-box {
+    width: 192px;
+    height: 226px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 5px; /* Adds slight spacing between images */
+}
+
+.image-box:last-child {
+    margin-right: 0; /* Removes right margin for last image */
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    font-size: 14.2px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Hover effect */
+.image-box:hover img {
+    transform: scale(1.05);
+}
+/* ✅ Tablet Screens: 768px to 1024px — 3 in a row, reduce font */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .image-box {
+        flex: 0 0 calc(33.33% - 10px);
+        height: 210px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .image-box p {
+        font-size: 13px;
+    }
+}
+
+/* ✅ Small Screens: 481px to 767px — Still 3 in a row but tighter */
+@media (max-width: 767px) and (min-width: 481px) {
+    .image-box {
+        flex: 0 0 calc(33.33% - 8px);
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .image-box p {
+        font-size: 12.5px;
+    }
+}
+
+/* ✅ Extra Small Screens: up to 480px — 2 per row */
+@media (max-width: 480px) {
+    .section-title {
+        margin-right: 10px;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px; /* Small spacing between boxes */
+    }
+
+    .image-box {
+        flex: 0 0 48%; /* Two items per row */
+        height: 180px;
+        margin-right: 0; /* Avoid overflow */
+    }
+
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .image-box p {
+        font-size: 12px;
+        padding: 4px;
+    }
+}
+
+
+</style>
+
+
+<section class="about-section">
+    <div class="about-content">
+        <h2 class="about-title">Discover More About Us</h2>
+        <p class="about-text">
+            Finding the ideal venue for your special event has never been easier. Whether you're planning a grand wedding, a corporate retreat, or an intimate celebration, we offer a handpicked selection of luxurious venues to match your vision. From breathtaking mountain escapes to stunning beachfront resorts, our exclusive spaces are designed to make every occasion unforgettable. Browse, select, and book your dream venue effortlessly—all in just a few clicks. Let us help you create memories that last a lifetime!
+        </p>
+        <div class="about-links">
+            <span class="about-link">Ask A Question</span>
+            <span class="about-link">Find A Venue</span>
+        </div>
+        <button class="about-button">Discover More</button>
+    </div>
+    <div class="about-image">
+        <img src="https://images.pexels.com/photos/2101704/pexels-photo-2101704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Beautiful Venue">
+    </div>
+</section>
+
+
+<style>
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 8%;
+    gap: 40px;
+}
+
+.about-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    font-size: 16px;
+    color: grey;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-links {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.about-button {
+    background-color: #008CFF;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    width: 220px;
+    height: 60px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.about-button:hover {
+    background-color: #0073cc;
+}
+
+.about-image img {
+    width: 382px;
+    height: 437px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+/* Tablet and below - max-width: 1024px */
+@media (max-width: 1024px) {
+    .about-title {
+        font-size: 30px;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .about-links {
+        font-size: 14px;
+    }
+
+    .about-button {
+        font-size: 14px;
+        width: 200px;
+        height: 50px;
+    }
+
+    .about-image img {
+        width: 320px;
+        height: 380px;
+    }
+}
+
+/* Small tablets and large phones - max-width: 768px */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 6%;
+        gap: 30px;
+    }
+
+    .about-title {
+        font-size: 20px;
+    }
+
+    .about-text {
+        font-size: 11 px;
+    }
+
+    .about-links {
+        font-size: 13px;
+        gap: 15px;
+    }
+
+    .about-button {
+        font-size: 13px;
+        width: 180px;
+        height: 45px;
+    }
+
+    .about-image img {
+        width: 280px;
+        height: 340px;
+    }
+}
+
+/* Mobile devices - max-width: 480px */
+@media (max-width: 480px) {
+    .about-section {
+        flex-direction: column;
+        text-align: left;
+        padding: 20px 5%;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-title {
+        font-size: 22px;
+    }
+
+    .about-text {
+        font-size: 13px;
+    }
+
+    .about-links {
+        font-size: 12px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+  
+    .about-button {
+        font-size: 12px;
+        width: 160px;
+        height: 42px;
+        margin: 0; /* Reset margins */
+        padding: 0;
+        align-self: flex-start; /* Ensures it stays aligned with the text */
+    }
+
+    .about-image {
+        display: none; /* Hide the image container */
+    }
+}
+
+</style>
+
+
+<section class="newsletter-section">
+    <div class="newsletter-box">
+        <span class="newsletter-title">NEWSLETTER</span>
+        <span class="newsletter-text">Stay Up to Date</span>
+        <div class="newsletter-icon">
+            <i class="paper-plane-icon">&#9993;</i> <!-- Unicode for paper plane -->
+        </div>
+    </div>
+</section>
+
+<style>
+    .newsletter-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.newsletter-box {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    height: 58px;
+    background-color: #EBEDF0; /* Light gray background */
+    border-radius: 30px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.newsletter-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    margin-right: 10px;
+}
+
+.newsletter-text {
+    font-size: 14px;
+    color: black;
+}
+
+.newsletter-icon {
+    width: 52px;
+    height: 52px;
+    background-color: #008CFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 3px;
+    cursor: pointer;
+    transition: background 0.
+}
+</style>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Side: Logo & Social -->
+        <div class="footer-left">
+            <h2 class="footer-logo">
+                Book <span class="highlight">My</span> Event
+            </h2>
+            <p class="footer-tagline">
+                Experience the Joy Of Effortless Venue Booking.
+            </p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Right Side: Links -->
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#">Find Venues</a></li>
+                    <li><a href="#">Conference Halls</a></li>
+                    <li><a href="#">Live Concerts</a></li>
+                    <li><a href="#">Club Parties</a></li>
+                    <li><a href="#">Training Venues</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Partner With Us</h3>
+                <ul>
+                    <li><a href="#">List Your Venue</a></li>
+                    <li><a href="#">BMV Program</a></li>
+                    <li><a href="#">Partnerships</a></li>
+                    <li><a href="#">Advertise With Us</a></li>
+                    <li><a href="#">Chat Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@company.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 794 Mcallister St, San Francisco, 94102</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+        <p class="copyright">Copyright © 2025 Book My Venue</p>
+        <p class="rights">
+            All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>
+        </p>
+    </div>
+   
+
+</footer>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
+
+<style>
+
+/* Footer Styling */
+.footer {
+    background-color: #E8EAEC;
+    padding: 60px 0; /* Increased top padding */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container */
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Left Section */
+.footer-left {
+    max-width: 280px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-logo .highlight {
+    color: #008CFF;
+}
+
+.footer-tagline {
+    font-size: 15px;
+    color: #6F6C90;
+    margin: 10px 0;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    font-size: 18px;
+    color: #008CFF;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #005f99;
+}
+
+/* Right Section */
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-column ul li {
+    font-size: 15px;
+    color: #6F6C90;
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #6F6C90;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #008CFF;
+}
+
+/* Contact Section Icons */
+.footer-column ul li i {
+    margin-right: 8px;
+    color: #6F6C90;
+    font-size: 18px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: #6F6C90;
+}
+
+.footer-bottom .rights a {
+    color: #008CFF;
+    text-decoration: none;
+}
+
+.footer-bottom .rights a:hover {
+    text-decoration: underline;
+}
+.footer-divider {
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background-color: #D3D3D3; /* Light grey color */
+    margin: 30px 0; /* Space above and below */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .newsletter-box {
+      width: 90%;
+      height: 50px;
+      padding: 0 15px;
+  }
+  .newsletter-title {
+      font-size: 16px;
+  }
+  .newsletter-text {
+      font-size: 12px;
+  }
+  .newsletter-icon {
+      width: 45px;
+      height: 45px;
+  }
+  
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .footer-left {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+  .footer-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+  .footer-column {
+      width: 100%;
+  }
+  .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newsletter-box {
+      height: 45px;
+  }
+  .newsletter-title {
+      font-size: 14px;
+  }
+  .newsletter-text {
+      font-size: 11px;
+  }
+  .newsletter-icon {
+      width: 40px;
+      height: 40px;
+  }
+  
+  .footer-logo {
+      font-size: 22px;
+  }
+  .footer-column h3 {
+      font-size: 18px;
+  }
+  .footer-column ul li {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newsletter-box {
+      height: 40px;
+      padding: 0 10px;
+  }
+  .newsletter-title {
+      font-size: 12px;
+  }
+  .newsletter-text {
+      font-size: 10px;
+  }
+  .newsletter-icon {
+      width: 35px;
+      height: 35px;
+  }
+  
+  .footer {
+      padding: 40px 0;
+  }
+  .footer-column h3 {
+      font-size: 16px;
+  }
+  .footer-column ul li {
+      font-size: 13px;
+  }
+  .social-icons a {
+      font-size: 16px;
+  }
+  .footer-bottom {
+      font-size: 13px;
+  }
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+/* Wrapper for better layout */
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styling */
+.featured-venues {
+    width: 100%;
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    font-size: 36px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Venue Container */
+.venue-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align items */
+    gap: 20px;
+    row-gap: 30px; /* Extra spacing between rows */
+    padding: 10px;
+}
+
+/* Venue Box */
+.venue-box {
+    width: calc(33.33% - 20px); /* Ensure 3 per row */
+    max-width: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.venue-box:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.venue-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Text Styling */
+.venue-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+    color: black;
+}
+
+.venue-location {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .venue-box {
+        width: calc(50% - 20px); /* 2 per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .venue-box {
+        width: 100%; /* 1 per row on small screens */
+    }
+}
+
+</style>
+
+
+
+  
+  </body>
+  </html>
+
+  
+
+
+</body>
+</html>
+
+
